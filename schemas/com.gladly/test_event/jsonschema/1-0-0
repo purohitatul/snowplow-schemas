@@ -1,0 +1,47 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: test event",
+  "self": {
+    "vendor": "com.gladly",
+    "name": "test_event",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "attr_boolean": {
+      "type": "boolean"
+    },
+    "attr_string": {
+      "type": "string"
+    },
+    "attr_string10": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "attr_integer": {
+      "type": "integer"
+    },
+    "attr_integer1000": {
+      "type": "integer",
+      "maximum": 1000
+    },
+    "attr_double": {
+      "type": "number"
+    },
+    "attr_decimal": {
+      "type": "number",
+      "multipleOf": 0.001
+    },
+    "attr_array": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "attr_missing": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

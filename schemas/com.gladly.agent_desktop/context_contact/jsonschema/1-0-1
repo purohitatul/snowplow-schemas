@@ -1,0 +1,27 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: contact (a.k.a. active session)",
+  "self": {
+    "vendor": "com.gladly.agent_desktop",
+    "name": "context_contact",
+    "format": "jsonschema",
+    "version": "1-0-1"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The ID of the Contact",
+      "type": "string"
+    },
+    "conversationId": {
+      "description": "ID of the Conversation within which this contact happened",
+      "type": "string"
+    },
+    "contactChannel": {
+      "description": "Channel on which the Contact happened (optional)",
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["id", "conversationId"],
+  "additionalProperties": false
+}

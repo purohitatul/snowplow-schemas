@@ -1,0 +1,22 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: chat message received",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "event_chat_message_received",
+    "format": "jsonschema",
+    "version": "1-0-1"
+  },
+  "type": "object",
+  "properties": {
+    "messageId": {
+      "type": "string"
+    },
+    "messageLength": {
+      "description": "The number of characters in the chat message",
+      "type": "number"
+    }
+  },
+  "required": ["messageId", "messageLength"],
+  "additionalProperties": false
+}

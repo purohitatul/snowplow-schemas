@@ -1,0 +1,29 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: link clicked",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "event_link_clicked",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "linkId": {
+      "type": "string"
+    },
+    "linkType": {
+      "type": "string",
+      "enum": [
+        "internalLink",
+        "externalLink",
+        "searchResult"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "required": ["linkId", "linkType"],
+  "additionalProperties": false
+}

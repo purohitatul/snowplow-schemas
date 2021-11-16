@@ -1,0 +1,28 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: practive chat campaign triggered",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "event_campaign_triggered",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "campaignId": {
+      "type": "string"
+    },
+    "actionType": {
+      "type": "string",
+      "enum": [
+        "GREETING",
+        "OPEN_WIDGET"
+      ]
+    }
+  },
+  "required": [
+    "campaignId",
+    "actionType"
+  ],
+  "additionalProperties": false
+}

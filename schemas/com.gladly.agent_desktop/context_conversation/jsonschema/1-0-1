@@ -1,0 +1,23 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: conversation",
+  "self": {
+    "vendor": "com.gladly.agent_desktop",
+    "name": "context_conversation",
+    "format": "jsonschema",
+    "version": "1-0-1"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The ID of the Conversation",
+      "type": "string"
+    },
+    "customerId": {
+      "description": "The ID of the Customer who has initiated the conversation",
+      "type": "string"
+    }
+  },
+  "required": ["id", "customerId"],
+  "additionalProperties": false
+}

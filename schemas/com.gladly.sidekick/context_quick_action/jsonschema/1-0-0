@@ -1,0 +1,35 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: quick action",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "context_quick_action",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "entityId": {
+      "description": "The ID for the underlying entity. For external links, this is the URL.",
+      "type": "string"
+    },
+    "entityType": {
+      "description": "The underlying entity for the quick action.",
+      "type": "string",
+      "enum": [
+        "answer",
+        "externalLink"
+      ]
+    },
+    "label": {
+      "description": "The label displayed to the user for the quick action.",
+      "type": "string"
+    },
+    "position": {
+      "description": "The position of this quick action in the list (1-indexed).",
+      "type": "integer"
+    }
+  },
+  "required": ["entityId", "entityType", "position"],
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: help center searched",
+  "self": {
+    "vendor": "com.gladly.help_center",
+    "name": "event_searched",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "searchTerm": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "searchTerm"],
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "composition",
+  "self": {
+    "vendor": "com.gladly.agent_desktop",
+    "name": "context_composition",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The ID of the composition",
+      "type": "string"
+    },
+    "customerId": {
+      "description": "The ID of the customer",
+      "type": "string"
+    },
+    "conversationId": {
+      "description": "The ID of the conversation",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "The content type of the composition",
+      "type": "string",
+      "enum": ["chat", "note", "email", "fbMessage", "sms", "task", "tweet"]
+    }
+  },
+  "required": ["id", "customerId", "contentType"],
+  "additionalProperties": false
+}

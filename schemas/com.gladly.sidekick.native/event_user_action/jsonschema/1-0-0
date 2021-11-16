@@ -1,0 +1,24 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "Event schema for a user initiated action, for example clicking a button.",
+  "self": {
+    "vendor": "com.gladly.sidekick.native",
+    "name": "event_user_action",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the user action, for example the name of the button.",
+      "type": "string",
+      "enum": [
+        "close_chat"
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false
+}

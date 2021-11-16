@@ -1,0 +1,21 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "Event schema when a push notification is received.",
+  "self": {
+    "vendor": "com.gladly.sidekick.native",
+    "name": "event_notification_received",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "background": {
+      "description": "Indicates if the notification was received while the application was in the background.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "background"
+  ],
+  "additionalProperties": false
+}

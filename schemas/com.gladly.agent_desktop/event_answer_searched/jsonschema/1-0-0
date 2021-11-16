@@ -1,0 +1,23 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "when agent searches for an answer",
+  "self": {
+    "vendor": "com.gladly.agent_desktop",
+    "name": "event_answer_searched",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "sortType": {
+      "description": "How the search results were sorted",
+      "type": "string",
+      "enum": ["FREQUENCY", "RELEVANCE", "SUGGESTED"]
+    },
+    "language": {
+      "description": "The language used to filter the search results",
+      "type": ["array", "null"]
+    }
+  },
+  "additionalProperties": false
+}

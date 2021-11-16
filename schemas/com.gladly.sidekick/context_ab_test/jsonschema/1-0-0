@@ -1,0 +1,25 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: AB TEST",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "context_ab_test",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "interactiveOnboarding": {
+      "description": "Test for the new interactive onboarding in the self service. This test involves testing between two different types of ways to get the customers name and email. form_onboarding being the old style, asking for the name and email in a form up front. interactive_onboarding being the new flow of asking for the email then name in conversational fashion.",
+      "type": "string",
+      "enum": [
+        "interactive",
+        "form"
+      ]
+    }
+  },
+  "required": [
+    "interactiveOnboarding"
+  ],
+  "additionalProperties": false
+}

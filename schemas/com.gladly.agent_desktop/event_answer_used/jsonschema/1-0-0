@@ -1,0 +1,24 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "when an agent uses an answer in drafting a composition (e.g. a note, email, chat message, etc.)",
+  "self": {
+    "vendor": "com.gladly.agent_desktop",
+    "name": "event_answer_used",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "position": {
+      "description": "The position of the answer in the list from which it was chosen, if any. For example, if it was the second result in an answer search, this would be `2`.",
+      "type": "integer"
+    },
+    "source": {
+      "description": "Where the answer was selected from",
+      "type": "string",
+      "enum": ["search", "suggestedAnswer"]
+    }
+  },
+  "required": ["position", "source"],
+  "additionalProperties": false
+}

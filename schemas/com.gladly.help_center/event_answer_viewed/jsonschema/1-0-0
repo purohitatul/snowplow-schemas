@@ -1,0 +1,23 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: help center answer viewed",
+  "self": {
+    "vendor": "com.gladly.help_center",
+    "name": "event_answer_viewed",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "source": {
+      "description": "Where the user navigated to the answer from",
+      "type": ["string", "null"],
+      "enum": ["search", "searchResults", "answerSection", "faqSection"]
+    },
+    "position": {
+      "description": "Position of the answer in the list of results",
+      "type": ["number", "null"]
+    }
+  },
+  "additionalProperties": false
+}

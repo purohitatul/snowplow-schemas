@@ -1,0 +1,37 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "shared context for all Gladly services",
+  "self": {
+    "vendor": "com.gladly",
+    "name": "context_gladly",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "orgId": {
+      "type": "string"
+    },
+    "stage": {
+      "description": "Use this field to separate production data from other environments. Note that `staging` encompasses `master`, `staging` and `uat` sites, among others. The `development` stage is for local development only.",
+      "type": "string",
+      "enum": [
+        "production",
+        "staging",
+        "development"
+      ]
+    },
+    "site": {
+      "type": "string",
+      "enum": [
+        "us-1.gladly.com",
+        "us-uat.gladly.qa",
+        "us-staging.gladly.qa",
+        "us-master.gladly.qa",
+        "localhost"
+      ]
+    }
+  },
+  "required": ["orgId", "stage", "site"],
+  "additionalProperties": false
+}

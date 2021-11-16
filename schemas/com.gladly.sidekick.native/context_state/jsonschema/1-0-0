@@ -1,0 +1,38 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "Context schema that captures information state of the application when an event was triggered.",
+  "self": {
+    "vendor": "com.gladly.sidekick.native",
+    "name": "context_state",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "appId": {
+      "description": "The appId the SDK was initialized with (internally this represent endpoint address).",
+      "type": "string"
+    },
+    "isChatVisible": {
+      "description": "If the chat view was in view when the event was triggered.",
+      "type": "boolean"
+    },
+    "isPushNotificationAuthorized": {
+      "description": "If the user has authorized the app to receive push notifications.",
+      "type": "boolean"
+    },
+    "isPushNotificationEnabled": {
+      "description": "If the user has enabled push notification for the app.",
+      "type": "boolean"
+    },
+    "isPushTokenRegistered": {
+      "description": "If the push notification token has been successfully registered with our server.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "appId",
+    "isChatVisible"
+  ],
+  "additionalProperties": false
+}

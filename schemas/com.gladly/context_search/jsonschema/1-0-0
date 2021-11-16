@@ -1,0 +1,24 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: search",
+  "self": {
+    "vendor": "com.gladly",
+    "name": "context_search",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "search UUID",
+      "type": "string"
+
+    },
+    "searchTerm": {
+      "description": "search term entered by the user",
+      "type": "string"
+    }
+  },
+  "required": ["searchTerm", "id"],
+  "additionalProperties": false
+}

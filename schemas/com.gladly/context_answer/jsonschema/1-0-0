@@ -1,0 +1,32 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: answer",
+  "self": {
+    "vendor": "com.gladly",
+    "name": "context_answer",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The ID of the snippet",
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the snippet",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "The channel of the snippet",
+      "type": "string",
+      "enum": ["anyChannel", "info", "message", "selfService"]
+    },
+    "language": {
+      "description": "The language of the snippet",
+      "type": "string"
+    }
+  },
+  "required": ["id", "name", "contentType"],
+  "additionalProperties": false
+}

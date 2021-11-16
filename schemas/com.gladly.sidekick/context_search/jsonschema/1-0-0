@@ -1,0 +1,21 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: search",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "context_search",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "searchTerm": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "searchTerm"],
+  "additionalProperties": false
+}

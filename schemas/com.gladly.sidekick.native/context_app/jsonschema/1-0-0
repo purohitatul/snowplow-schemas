@@ -1,0 +1,26 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "Context schema that captures information about the application that embeds and uses the SDK.",
+  "self": {
+    "vendor": "com.gladly.sidekick.native",
+    "name": "context_app",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the application.",
+      "type": "string"
+    },
+    "version": {
+      "description": "The version of the application.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "version"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: widget is loaded",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "event_widget_loaded",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "additionalProperties": false
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: widget",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "context_widget",
+    "format": "jsonschema",
+    "version": "2-5-0"
+  },
+  "type": "object",
+  "properties": {
+    "autoThrottlingThreshold": {
+      "type": "number"
+    },
+    "chatSessionId": {
+      "type": "string"
+    },
+    "endpointAddress": {
+      "type": "string"
+    },
+    "estimatedWait": {
+      "type": "number"
+    },
+    "isAutoThrottlingEnabled": {
+      "type": "boolean"
+    },
+    "isInOfficeHours": {
+      "type": "boolean"
+    },
+    "isThrottled": {
+      "type": "boolean"
+    },
+    "isWidgetHidden":{
+      "type": "boolean"
+    },
+    "isWidgetOnPage":{
+      "type": "boolean"
+    },
+    "platform":{
+      "type": "string",
+      "enum": ["WEB", "IOS", "ANDROID", "REACT_NATIVE"]
+    },
+    "smoochAppId": {
+      "type": "string"
+    },
+    "screen": {
+      "type": "string",
+      "enum": ["after_hours", "answer", "chat", "home", "search"]
+    },
+    "visibility": {
+      "type": "string",
+      "enum": ["hidden", "minimized", "open"]
+    }
+  },
+  "required": [
+    "autoThrottlingThreshold",
+    "endpointAddress",
+    "estimatedWait",
+    "isAutoThrottlingEnabled",
+    "isInOfficeHours",
+    "isThrottled",
+    "isWidgetHidden",
+    "isWidgetOnPage",
+    "platform",
+    "smoochAppId",
+    "visibility"
+  ],
+  "additionalProperties": false
+}

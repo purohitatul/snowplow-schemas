@@ -1,0 +1,34 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for event: clicking on greeting bubble",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "event_greeting_clicked",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["OPEN", "CLOSE"]
+    },
+    "campaignId": {
+      "type": "string"
+    },
+    "sourceType": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "ignoreThrottle": {
+      "type": "boolean"
+    },
+    "skipOnboarding": {
+      "type": "boolean"
+    }
+  },
+  "required": ["action", "ignoreThrottle", "message", "skipOnboarding", "sourceType"],
+  "additionalProperties": false
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "description": "schema for context: widget",
+  "self": {
+    "vendor": "com.gladly.sidekick",
+    "name": "context_widget",
+    "format": "jsonschema",
+    "version": "2-3-1"
+  },
+  "type": "object",
+  "properties": {
+    "visibility": {
+      "type": "string",
+      "enum": ["hidden", "minimized", "open"]
+    },
+    "screen": {
+      "type": "string",
+      "enum": ["after_hours", "answer", "chat", "home", "search"]
+    },
+    "isInOfficeHours": {
+      "type": "boolean"
+    },
+    "isThrottled": {
+      "type": "boolean"
+    },
+    "smoochAppId": {
+      "type": "string"
+    },
+    "chatSessionId": {
+      "type": "string"
+    },
+    "endpointAddress": {
+      "type": "string"
+    },
+    "platform":{
+      "type": "string",
+      "enum": ["WEB", "IOS", "ANDROID", "REACT_NATIVE"]
+    }
+  },
+  "required": [
+    "endpointAddress",
+    "isInOfficeHours",
+    "isThrottled",
+    "smoochAppId",
+    "visibility",
+    "platform"
+  ],
+  "additionalProperties": false
+}
