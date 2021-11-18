@@ -24,6 +24,7 @@
       "enum": ["FREQUENCY", "RELEVANCE"]
     }
   },
+  "title": "ad_context_answer_used_102",  
   "required": ["position", "source", "sortType"],
   "additionalProperties": false
 }
