@@ -8,6 +8,7 @@
     "version": "1-0-0"
   },
   "type": "object",
+  "title": "ad_context_answer_used_100",
   "properties": {
     "position": {
       "description": "The position of the answer in the list from which it was chosen, if any. For example, if it was the second result in an answer search, this would be `2`.",
