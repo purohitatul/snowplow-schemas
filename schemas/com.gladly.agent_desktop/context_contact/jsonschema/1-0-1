@@ -7,6 +7,7 @@
     "format": "jsonschema",
     "version": "1-0-1"
   },
+  "title": "ad_context_contact_101",  
   "type": "object",
   "properties": {
     "id": {
