@@ -7,6 +7,7 @@
     "format": "jsonschema",
     "version": "1-0-0"
   },
+  "title": "test_context",
   "type": "object",
   "properties": {
     "id": {
