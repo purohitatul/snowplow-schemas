@@ -8,6 +8,7 @@
     "version": "1-0-0"
   },
   "type": "object",
+  "title": "test_event",
   "properties": {
     "attr_boolean": {
       "type": "boolean"
